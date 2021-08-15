@@ -12,10 +12,11 @@ from sklearn.cluster import KMeans
 
 st.sidebar.header('Parameter Setting')
 with st.sidebar.form(key ='form1'):
-    courseid = st.text_input('Course ID (e.g., CL10120192)')
-    startdate = st.text_input('Course Start Date (e.g., 2020-02-23)')
-    enddate = st.text_input('Course End Date (e.g., 2020-06-29)')
+    courseid = st.text_input('*Course ID (e.g., CL10120192)')
+    startdate = st.text_input('*Course Start Date (e.g., 2020-02-23)')
+    enddate = st.text_input('*Course End Date (e.g., 2020-06-29)')
     studentid = st.text_input('Student ID (e.g., 3180300116)')
+    # *: required
     submitted1 = st.form_submit_button(label = 'Submit Parameters')
 
 
