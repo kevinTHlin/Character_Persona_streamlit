@@ -98,13 +98,17 @@ def character_table():
     table = pd.DataFrame(df_Learners_scaled, index = df_Learners.index, 
                                         columns = df_Learners.columns).round(4)
 
-    return st.write(table.loc[studentid])
+    if studentid:
+        return st.write(table.loc[studentid])
+    
+    else: 
+        return st.write(table)
 
 
 
 st.title('Character Persona')
 if submitted1:
-    if courseid and startdate and enddate and studentid:
+    if courseid and startdate and enddate:
         character_table()
     else:
         st.write('Please input all parameters required with the correct format.')
